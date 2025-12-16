@@ -1,0 +1,174 @@
+/* Google Fonts - optional: move to HTML for faster load */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0 5vw;
+    background-color: #6165F8;
+    min-height: 100vh;
+}
+
+.preview-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 60px auto;
+    position: relative;
+    font-weight: 700;
+    display: block; /* visible by default */
+}
+
+.img-compare {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-compare img {
+    width: 100%;
+    display: block;
+}
+
+.img-original {
+    position: relative;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-right: 2px solid white;
+}
+
+.img-compressed {
+    width: 100%;
+}
+
+#slider-input {
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.label {
+    position: absolute;
+    top: -30px;
+    font-weight: 700;
+    color: white;
+}
+
+.label.compressed {
+    left: 10px;
+}
+
+.label.original {
+    right: 10px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 12px;
+    padding: 40px 30px;
+    color: white;
+    margin-top: 40px;
+}
+
+.upload,
+.download {
+    border: none;
+    padding: 10px 30px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #6165F8;
+    font-weight: 700;
+    border-radius: 4px;
+    width: 125px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.metadata {
+    display: inline;
+    margin-left: 5px;
+}
+
+.metadata li {
+    display: inline-block;
+    font-weight: 700;
+    width: 200px;
+}
+
+.metadata li span {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    font-weight: 400;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.input-value {
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.track {
+    height: 6px;
+    width: 100%;
+    background-color: #6F73F9;
+    position: relative;
+    margin-top: 15px;
+}
+
+.input-value::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: #6165F8;
+    border: 2px solid white;
+    height: 22px;
+    width: 22px;
+    margin-top: -8px;
+}
+
+.top,
+.bottom {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top {
+    border-right: 2px solid white;
+}
+
+.top img,
+.bottom img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.compressed,
+.original {
+    position: absolute;
+    top: -25px;
+    color: white;
+}
+
+.original {
+    right: 0;
+}
+
+/* Only hide elements that are hidden initially via JS */
+.output,
+.progress {
+    display: none;
+}
